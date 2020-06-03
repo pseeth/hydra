@@ -19,10 +19,9 @@ Check the [website](https://hydra.cc/) for more information.
 - [Documentation](https://hydra.cc/docs/intro)
 - Installation : `pip install hydra-core --upgrade`
 
-#### Release candidate
-**Hydra 1.0** is the next major version of Hydra. It is currently a release candidate.  
+#### Hydra 1.0
+Hydra 1.0 is the next major version of Hydra. It is currently a release candidate.  
 Please report any issues.
-- [Release notes](https://github.com/facebookresearch/hydra/releases/tag/hydra-1.0.0rc1)
 - [Documentation](https://hydra.cc/docs/next/intro)
 - Installation : `pip install hydra-core --upgrade --pre`
 
