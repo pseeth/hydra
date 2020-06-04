@@ -111,10 +111,8 @@ module.exports = {
         ],
 
         'FB Only': FBInternalOnly([
-            'fb/intro',
-            'fb/fbcode',
-            'fb/internal-fb-cluster',
-            'fb/fair-cluster',
+            'development/release',
         ]),
+
     }
 }
