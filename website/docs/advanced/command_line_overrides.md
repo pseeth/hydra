@@ -26,7 +26,7 @@ GROUP[@SRC_PKG[:DEST_PKG]][=OPTION]
 
 ```text title="Config overrides"
 KEY=VALUE
-KEY   : .+
+KEY   : [:alphanum:_-]+
 VALUE : .+
 
 # Changing an existing item
