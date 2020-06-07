@@ -80,7 +80,7 @@ module.exports = {
         ],
 
         'Advanced': [
-            'advanced/overriding_packages',
+            'advanced/package_directive',
             'advanced/command_line_overrides',
             'advanced/search_path',
             'advanced/plugins',
