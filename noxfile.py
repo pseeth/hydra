@@ -290,8 +290,7 @@ def test_plugins(session, install_cmd):
     for plugin in selected_plugin:
         cmd = list(install_cmd) + [os.path.join("plugins", plugin.path)]
         session.run(*cmd, silent=SILENT)
-        if not SILENT:
-            session.run("pipdeptree", "-p", plugin.name)
+        session.run("pipdeptree", "-p", plugin.name)
 
     # Test that we can import Hydra
     session.run("python", "-c", "from hydra import main", silent=SILENT)
