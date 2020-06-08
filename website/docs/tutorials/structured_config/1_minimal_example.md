@@ -6,9 +6,10 @@ title: Minimal example
 There are four key elements in this example:
 - A `@dataclass` describes the application's configuration
 - `ConfigStore` manages the Structured Config. 
-- `cfg` is `duck typed` as a `MySQLConfig` instead of a `DictConfig` 
+- `cfg` is `duck typed` as a `MySQLConfig` instead of a `DictConfig`
+- There is a subtle typo in the code, can you spot it?
 
-In this example, the config node stored in the `ConfigStore` replaces the traditional `config.yaml` file. 
+In this example, the config node stored in the `ConfigStore` replaces the traditional `config.yaml` file.  
 
 ```python title="my_app_type_error.py" {18}
 from dataclasses import dataclass
