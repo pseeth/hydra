@@ -585,7 +585,7 @@ def test_sweep_complex_defaults(
 
 --config-path,-cp : Overrides the config_path specified in hydra.main().
                     The config_path is relative to the Python file declaring @hydra.main()
---config_name,-cn : Overrides the config_name specified in hydra.main()
+--config-name,-cn : Overrides the config_name specified in hydra.main()
 --info,-i : Print Hydra information
 Overrides : Any key=value arguments to override config values (use dots for.nested=overrides)
 """,
@@ -631,7 +631,7 @@ Overrides : Any key=value arguments to override config values (use dots for.nest
 
 --config-path,-cp : Overrides the config_path specified in hydra.main().
                     The config_path is relative to the Python file declaring @hydra.main()
---config_name,-cn : Overrides the config_name specified in hydra.main()
+--config-name,-cn : Overrides the config_name specified in hydra.main()
 --info,-i : Print Hydra information
 Overrides : Any key=value arguments to override config values (use dots for.nested=overrides)
 """,
