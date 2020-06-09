@@ -160,7 +160,9 @@ class TestComposeCloudInfraExample:
             assert ret == expected
 
 
-def test_missing_init_py_error(hydra_restore_singletons: Any) -> None:
+def test_missing_init_py_error(
+    restore_singletons: Any, hydra_global_context: TGlobalHydraContext
+) -> None:
     with pytest.raises(
         Exception,
         match=re.escape(
@@ -168,7 +170,9 @@ def test_missing_init_py_error(hydra_restore_singletons: Any) -> None:
             "did you forget an __init__.py?"
         ),
     ):
-        with initialize_ctx(config_path="../hydra/test_utils/configs/missing_init_py"):
+        with hydra_global_context(
+            config_dir="../hydra/test_utils/configs/missing_init_py"
+        ):
             hydra = GlobalHydra.instance().hydra
             assert hydra is not None
             hydra.compose_config(config_name=None, overrides=[])

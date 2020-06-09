@@ -159,11 +159,7 @@ class Hydra:
         return cfg
 
     def show_cfg(
-        self,
-        config_name: Optional[str],
-        overrides: List[str],
-        cfg_type: str,
-        package: Optional[str],
+        self, config_name: Optional[str], overrides: List[str], cfg_type: str
     ) -> None:
         cfg = self._get_cfg(
             config_name=config_name,
@@ -171,24 +167,7 @@ class Hydra:
             cfg_type=cfg_type,
             with_log_configuration=False,
         )
-        if package is not None:
-            if package == "_global_":
-                package = ""
-            ret = OmegaConf.select(cfg, package)
-            if ret is None:
-                sys.stderr.write(f"package '{package}' not found in config\n")
-                sys.exit(1)
-            else:
-                if isinstance(ret, Container):
-                    if package == "":
-                        package = "_global_"
-                    print(f"# @package {package}")
-                    sys.stdout.write(ret.pretty())
-                else:
-                    print(ret)
-        else:
-            print("# @package _global_")
-            sys.stdout.write(cfg.pretty())
+        print(cfg.pretty())
 
     @staticmethod
     def get_shell_to_plugin_map(
